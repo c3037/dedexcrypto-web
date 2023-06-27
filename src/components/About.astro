@@ -1,0 +1,75 @@
+---
+import Section from './Section.astro';
+---
+
+<Section id="about">
+    <div class="container">
+        <div class="content">
+            <h2 class="heading">About us</h2>
+            <p class="text">
+                DEDEX is a hybrid project that combines the functionality of an
+                algorithmic stablecoin and a decentralized derivatives exchange.<br
+                /><br />
+                 Traditional centralized trading systems may restrict and censor
+                users — these systems lack anonymity and there is a risk of
+                central authority mismanagement. DEDEX solves these issues by
+                offering a secure, censorship-free, and fully decentralized
+                trading environment.<br /><br />
+                 Moreover, DEDEX instills a DeFi revolution, empowered by the
+                derivatives market, and offers unique products such as a
+                capital-efficient stablecoin and &apos;real value
+                representation&apos;: the ability to create a representation of
+                the real-world assets on-chain.
+            </p>
+        </div>
+    </div>
+</Section>
+
+<style>
+    .container {
+        margin: 4.31rem 0 5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content {
+        position: relative;
+        display: flex;
+        max-width: 71.625rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content::before {
+        position: absolute;
+        width: 3.06688rem;
+        height: 2.55525rem;
+        flex-shrink: 0;
+        transform: translateY(15%);
+        left: -5%;
+        top: 0;
+        content: url('/decoration.svg');
+    }
+    .heading {
+        color: #001f3e;
+        font-size: 3.125rem;
+        font-family: Outfit;
+        font-weight: 600;
+    }
+    .text {
+        margin-top: 1rem;
+        color: rgba(0, 31, 62, 0.6);
+        font-size: 1rem;
+        font-family: Manrope;
+        font-weight: 500;
+        line-height: 160%;
+        letter-spacing: 0.01rem;
+    }
+    @media (max-width: 1280px) {
+        .content::before {
+            display: none;
+        }
+        .heading {
+            font-size: 2.25rem;
+        }
+    }
+</style>

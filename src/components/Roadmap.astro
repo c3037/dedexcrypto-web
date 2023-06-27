@@ -1,0 +1,118 @@
+---
+import RoadPoint from './RoadPoint.astro';
+import Section from './Section.astro';
+---
+
+<Section id="roadmap">
+    <div class="title-container">
+        <h2 class="title">Roadmap</h2>
+    </div>
+    <div class="content">
+        <div class="seperator"></div>
+        <RoadPoint
+            isLeft={true}
+            title="Foundation and Launch"
+            phaseNum={1}
+            points={[
+                {
+                    title: 'One-Pair Derivatives Exchange',
+                    text: 'Launch a derivatives exchange focused on the ETH/USD pair.',
+                },
+                {
+                    title: 'Decentralized Stablecoin (dxUSD)',
+                    text: 'Introduce dxUSD as a decentralized stablecoin, providing a secure and capital-efficient alternative to traditional stablecoins.',
+                },
+            ]}
+        />
+        <RoadPoint
+            isLeft={false}
+            title="Expansion and Integration"
+            phaseNum={2}
+            points={[
+                {
+                    title: 'Spot DEX',
+                    text: 'Introduce a spot exchange with dxUSD pairs to enhance stablecoin utility and market integration.',
+                },
+                {
+                    title: 'Stablecoin Payment Network',
+                    text: 'Develop a blockchain network with dxUSD as its native coin as a decentralized alternative to Visa/Mastercard, which is fast, efficient, and optimized for value transfers.',
+                },
+            ]}
+        />
+        <RoadPoint
+            isLeft={true}
+            title="Ecosystem Maturity"
+            phaseNum={3}
+            points={[
+                {
+                    title: 'Multi-Pair Derivatives Exchange',
+                    text: 'Expand the derivatives exchange to include multiple trading pairs, with dxUSD as the primary collateral and settlement asset.',
+                },
+                {
+                    title: 'Lending and Real Value Representation',
+                    text: "Introduce a lending tool for dxUSD and develop features to represent real-world assets on-chain, broadening DEDEX's financial ecosystem.",
+                },
+            ]}
+        />
+    </div>
+</Section>
+
+<style>
+    .content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+    .title-container {
+        display: flex;
+        justify-content: center;
+        margin: 3.88rem 0;
+        align-items: center;
+    }
+    .title {
+        position: relative;
+        width: fit-content;
+        color: #001f3e;
+        font-size: 3.125rem;
+        font-family: Outfit;
+        font-weight: 600;
+    }
+    .title::before {
+        content: url('/decoration.svg');
+        position: absolute;
+        left: -3rem;
+        top: -1.3rem;
+    }
+    .seperator {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 66.666%;
+        width: 2px;
+        background: repeating-linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0) 7px,
+            rgba(0, 31, 62, 1) 7px,
+            rgba(0, 31, 62, 1) 14px
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    @media (max-width: 768px) {
+        .content {
+            margin-left: 2rem;
+        }
+        .seperator {
+            left: 0rem;
+        }
+        .title-container {
+            justify-content: start;
+        }
+        .title::before {
+            display: none;
+        }
+    }
+</style>

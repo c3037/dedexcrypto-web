@@ -1,0 +1,45 @@
+---
+import For from './For.astro';
+import Section from './Section.astro';
+---
+
+<Section color="#F6FAFD">
+    <div class="container">
+        <For
+            id="fortraders"
+            img="/fortraders.svg"
+            title="For Traders"
+            text="With DEDEX, traders benefit from a decentralized ecosystem that offers true ownership and control over their assets. The platform’s innovative market-making algorithm ensures trades are executed at the current index price, minimizing slippage and enhancing profitability by eliminating borrowing fees."
+        />
+        <div class="seperator"></div>
+        <For
+            id="formarketmakers"
+            img="/formarketmakers.svg"
+            title="For Market-Makers"
+            text="Makers gain access to a lucrative trading environment with DEDEX. In all instances, the algorithm ensures that the open trading position of market makers tends towards zero, minimizing the risks of price changes, while guaranteeing commission for each transaction. It’s all automated, eliminating the need for active participation or gas fees."
+        />
+        <div class="seperator"></div>
+        <For
+            id="forliquidators"
+            img="/forliquidators.svg"
+            title="For Liquidators"
+            text="Liquidators emerge as the central players in our ecosystem, maintaining stability and safeguarding the system against critical losses. The result? Liquidators earn a profit through liquidation commissions by ensuring traders meet their collateral obligations."
+        />
+    </div>
+</Section>
+
+<style>
+    .container {
+        display: flex;
+        padding: 6rem 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 4.5rem;
+    }
+    .seperator {
+        width: 100%;
+        height: 1px;
+        background: rgba(0, 31, 62, 0.08);
+    }
+</style>
